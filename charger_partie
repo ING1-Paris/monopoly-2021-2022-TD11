@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE* fichier = NULL;
+    charger_partie();
+    return 0;
+}
+
+
+void charger_partie()
+{
+    int partie;
+    FILE* fichier = NULL;
+    do
+    {
+        printf("Quelle partie souhaitez-vous reprendre ? La partie 1, 2 ou 3 \n");
+        scanf("%d",&partie);
+
+    }while (partie != typeof(partie);       //il reconnait pas la fonction typeof ????
+
+    if (partie == 1 )
+    {
+       // fichier = fopen("sauvegarde1.txt", "r+");   /*La commande 'r+' va permettre de lire les informations de l'ancienne partie et d'écrire les nouvelles
+                                                //fichier crée au préalable*/
+        fichier = fopen("sauvegarde1.txt", "a+");
+    }
+    if (partie == 2 )
+    {
+        //fichier = fopen("sauvegarde2.txt", "r+");
+        fichier = fopen("sauvegarde2.txt", "a+");          // La commande 'a+' permet d'écrire et de lire du texte à partir de la fin du fichier
+                                                            /// QUESTION : est-ce qu'on a besoin d'avoir la fenêtre du fichier qui s'ouvre ou on l'utilisera sans l'afficher ?
+    }
+    if (partie == 3)
+    {
+        //fichier = fopen("sauvegarde3.txt", "r+");
+        fichier = fopen("sauvegarde3.txt", "a+");
+    }
+    return 0;
+}
+
+
+void demande_sauvegarde()       //demande si oui ou non on veut sauvegarder la partie
+{
+    int choix;
+    printf("Voulez-vous sauvegarder votre partie ? Tapez 1 si oui tapez 0 si non !\n");
+    scanf("%d",&choix);
+
+    if (choix == 1 )
+    {
+        printf("Vous avez choisi de sauvegarger votre partie ! A très vite !! ");
+    }
+    else if (choix == 0)
+    {
+        printf("Vous avez supprimé votre partie !");
+    }
+    return 0;
+}
