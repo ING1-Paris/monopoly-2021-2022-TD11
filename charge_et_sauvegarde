@@ -1,3 +1,18 @@
+///structure modifiée le tableau connaissance empêche la compilation
+///important il faut sauvegarder avant de charger ; la sauvegarde permet d'avoir les infos qu'on vient de saisir dans le fichier ET la charge 
+et permet d'afficher le fichier text sur le bureau
+
+typedef struct
+{
+    int identifiant;
+    char nom[10];//nom du joueur
+    int portefeuille;//Temps que possède le joueur
+    struct connaissance[20];//tableau de structures contenant les cours de chaque joueur; ///JE SAIS PAS COMMENT DECLARER UN TABLEAU DE STRCUT????
+    int emplacement[4][8];//Endroit du plateau ou se trouve le joueur.
+} joueur; //Informations de chaque joueur.
+
+#endif // STRUCTURES_H_INCLUDED
+
 void charger_une_ancienne_partie()
 {
     int partie;
