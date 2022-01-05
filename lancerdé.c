@@ -13,4 +13,5 @@ dee = a+b;
 printf("le total est %d", a);
 printf("+ %d ",b);
 printf("donc : %d\n",dee);
+return dee;
 }

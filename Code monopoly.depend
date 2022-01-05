@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1641307240 source:c:\users\33769\documents\travail\algo et prog\code monopoly\debut.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+
+1639994285 source:c:\users\33769\documents\travail\algo et prog\code monopoly\lancerdé.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+
+1641290857 source:c:\users\33769\documents\travail\algo et prog\code monopoly\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+	<windows.h>
+
+1640006853 c:\users\33769\documents\travail\algo et prog\code monopoly\structures.h
+
+1639751734 source:c:\users\33769\documents\travail\algo et prog\code monopoly\affichageplateau.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+	<windows.h>
+
