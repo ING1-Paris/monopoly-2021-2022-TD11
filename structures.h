@@ -1,6 +1,10 @@
 #ifndef STRUCTURES_H_INCLUDED
 #define STRUCTURES_H_INCLUDED
 
+int lancerde();
+void debutpartie();
+void initialisation();
+
 typedef struct{
     int proprietaire,prix0, prix20, prix1, prix2, prix3, prix4, prix5, prixFiche, vPro, vProap;
     /* Prix0 = prix de base sans maisons etc
@@ -14,9 +18,10 @@ typedef struct{
        vPro = hypothèque
        vProap = prix à payer pour lever l'hypothèque*/
     int coutDachat;//Prix à payer pour acheter un cours
-    char nomCase[50];// Tableau contenant le nom de la case
+    char* nomCase;// Tableau contenant le nom de la case
     int joueuremplacement;//Nombre de joueurs dans la case.
 }structcase;//informations contenues dans chaque case.
+
 
 typedef struct{
     int identifiant;
