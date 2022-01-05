@@ -25,3 +25,29 @@
 	"structures.h"
 	<windows.h>
 
+1641387736 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\affichageplateau.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+	<windows.h>
+
+1641387736 c:\users\33769\documents\github\monopoly-2021-2022-td11\structures.h
+
+1641387736 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+
+1641387736 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\lancerdé.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+
+1641387736 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+	<windows.h>
+
