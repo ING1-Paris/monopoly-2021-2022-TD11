@@ -31,9 +31,6 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="affichageplateau.c">
-			<Option compilerVar="CC" />
-		</Unit>
 		<Unit filename="debut.c">
 			<Option compilerVar="CC" />
 		</Unit>

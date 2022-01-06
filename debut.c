@@ -165,7 +165,7 @@ void initialisation(structcase cases[32]){
         cases[i].prix1=b;
         b=b+10;
     }
-    l
+
     //les prix des maisons vont de 50 en 50 entre les 4 lignes (50 pour la 1ere ligne, 100 pour la deuxième, etc)
     for(int i=1;i<32;i=i+8){
         cases[i].prixFiche=c;
