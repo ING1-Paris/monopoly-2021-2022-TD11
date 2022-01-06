@@ -181,7 +181,7 @@ void initialisation(structcase cases[32]){
 }
 void debutpartie(){
     int nbjoueurs;
-    int i;
+    int i,a;
     FILE* fichier=NULL;
 
     //ici le but est de créer une sauvegarde uniquement si elle n'éxiste pas déjà, afin de s'y retrouver plus facilement
@@ -222,7 +222,9 @@ void debutpartie(){
         tableauj[i].emplacement[1][1];
         tableauj[i].portefeuille=1500;
         printf("Bonjour %s ,vous \x88tes le joueur %d, vous commencez avec 1500 minutes, faites en bon usage!\n",tableauj[i].nom,i);
-
+        printf("entrez 1 pour continuer avec le joueur 2");
+        scanf("%d",&a);
+        system("cls");
     }
 fclose(fichier);
 };

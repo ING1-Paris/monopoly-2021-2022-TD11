@@ -29,6 +29,7 @@ typedef struct{
     int portefeuille;//Temps que possède le joueur
     structcase connais[20];//tableau de structures contenant les cours de chaque joueur
     int emplacement[4][8];//Endroit du plateau ou se trouve le joueur.
+    bool prison;
 }joueur;//Informations de chaque joueur.
 
 

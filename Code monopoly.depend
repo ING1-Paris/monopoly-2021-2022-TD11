@@ -13,10 +13,15 @@
 	<time.h>
 	"structures.h"
 
-1641389937 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
+1641483800 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"structures.h"
 	<windows.h>
+
+1641389971 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
 
