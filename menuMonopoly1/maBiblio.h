@@ -7,7 +7,7 @@
 int lancerde();
 void debutpartie();
 void initialisation();
-
+//c
 typedef struct{
     int proprietaire,prix0, prix20, prix1, prix2, prix3, prix4, prix5, prixFiche, vPro, vProap;
     /* Prix0 = prix de base sans maisons etc
