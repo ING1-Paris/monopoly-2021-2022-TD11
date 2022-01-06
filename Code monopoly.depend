@@ -1,0 +1,22 @@
+# depslib dependency file v1.0
+1641388219 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\affichageplateau.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+	<windows.h>
+
+1641389940 c:\users\33769\documents\github\monopoly-2021-2022-td11\structures.h
+
+1641389925 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\lancerdé.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+
+1641389937 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+	<windows.h>
+
