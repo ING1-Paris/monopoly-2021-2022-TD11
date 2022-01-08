@@ -6,6 +6,8 @@
 int lancerde();
 void debutpartie();
 void initialisation();
+void chance(/**/, int nombreJoueurs, joueur tableauj[5]);
+void caisseDeCommunaute(/**/, int nombreJoueurs, joueur tableauj[5]);
 
 typedef struct{
     int proprietaire,prix0, prix20, prix1, prix2, prix3, prix4, prix5, prixFiche, vPro, vProap;
