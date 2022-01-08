@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1641636196 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
+1641636836 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
 	<stdio.h>
 	<stdlib.h>
 	"structures.h"
@@ -18,8 +18,15 @@
 	<stdlib.h>
 	"structures.h"
 
-1641636196 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\payerloyer.c
+1641637776 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\payerloyer.c
 	<stdio.h>
 	<stdlib.h>
 	"structures.h"
+
+1641637356 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"structures.h"
+	<windows.h>
 

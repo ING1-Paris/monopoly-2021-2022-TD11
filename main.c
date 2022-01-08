@@ -20,16 +20,11 @@ int main()
     int tab[9][5];
     structcase cases[32];
     initialisation(cases);
-    printf("%d\n",cases[1].prix0);
-    printf("%s\n",cases[0].nomCase);
-    for(int a=0;a<32;a++)
-    {
-        printf("%s\n",cases[a].nomCase);
-    }
 
-    cases[1].proprietaire=2;
+    cases[31].proprietaire=2;
+    cases[31].nbfiches=4;
 
-    tab[2][1]=6;
+    tab[8][4]=6;
     arrivcase(2,tab,6,cases,tableauj);
 
 }

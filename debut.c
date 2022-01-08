@@ -5,7 +5,7 @@
 void initialisation(structcase cases[32])
 {
     //variables servants lors des boucles de remplissage
-    //int a=2;
+    int a=2;
     int b=10;
     int c=50;
     /*initialisation de toutes les données ne pouvant pas se faire par boucle
@@ -15,7 +15,6 @@ void initialisation(structcase cases[32])
     cases[1].nomCase="\x82lectronique num\x82rique chap1";
     cases[1].coutDachat=60;
     cases[1].vPro=30;
-    cases[1].prix0=2;
     cases[1].prix2=30;
     cases[1].prix3=90;
     cases[1].prix4=160;
@@ -154,11 +153,11 @@ void initialisation(structcase cases[32])
     cases[31].prix4=1700;
     cases[31].prix5=2000;
     //les prix sans maison et sans doublon vont de 2 en 2 ( sauf les 2 dernières cases )
-    /*for(int i=1; i<29; i=i+2)
+    for(int i=1; i<29; i=i+2)
     {
         cases[i].prix0=a;
         a=a+2;
-    }*/
+    }
     //les prix sans maison avec doublons sont le double des prix0
     for(int i=1; i<32; i=i+2)
     {
