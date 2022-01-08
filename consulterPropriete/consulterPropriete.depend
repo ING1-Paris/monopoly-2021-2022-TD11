@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1641655647 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\consulterpropriete\consulterpropriete.c
+	"maBiblio.h"
+
+1641655264 c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\consulterpropriete\mabiblio.h
+	<stdio.h>
+	<stdlib.h>
+
+1641655454 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\consulterpropriete\main.c
+	"maBiblio.h"
+
