@@ -3,5 +3,5 @@
 void lancementNouvellePartie()
 {
     initialisation();
-    departPartie();
+    debutpartie();
 }
