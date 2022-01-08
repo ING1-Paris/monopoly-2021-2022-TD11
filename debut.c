@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include "structures.h"
 //sousprogramme servant à remplir un tableau de cases lors de l'initialisation d'une partie
-void initialisation(structcase cases[32]){
+void initialisation(structcase cases[32])
+{
     //variables servants lors des boucles de remplissage
-    int a=2;
+    //int a=2;
     int b=10;
     int c=50;
     /*initialisation de toutes les données ne pouvant pas se faire par boucle
@@ -14,6 +15,7 @@ void initialisation(structcase cases[32]){
     cases[1].nomCase="\x82lectronique num\x82rique chap1";
     cases[1].coutDachat=60;
     cases[1].vPro=30;
+    cases[1].prix0=2;
     cases[1].prix2=30;
     cases[1].prix3=90;
     cases[1].prix4=160;
@@ -44,8 +46,8 @@ void initialisation(structcase cases[32]){
     cases[7].prix3=300;
     cases[7].prix4=450;
     cases[7].prix5=600;
-    cases[8].nomCase="grosse soir\x82e";
-    cases[9].nomCase="m\x82canique chap1";
+    cases[8].nomCase="grosse soiree";
+    cases[9].nomCase="mecanique chap1";
     cases[9].coutDachat=140;
     cases[9].vPro=70;
     cases[9].prix2=150;
@@ -53,7 +55,7 @@ void initialisation(structcase cases[32]){
     cases[9].prix4=625;
     cases[9].prix5=750;
     cases[10].nomCase="LV1";
-    cases[11].nomCase="m\x82canique chap2";
+    cases[11].nomCase="mecanique chap2";
     cases[11].coutDachat=160;
     cases[11].vPro=80;
     cases[11].prix2=180;
@@ -112,8 +114,8 @@ void initialisation(structcase cases[32]){
     cases[23].prix3=850;
     cases[23].prix4=1025;
     cases[23].prix5=1200;
-    cases[24].nomCase="allez en soir\x82e";
-    cases[25].nomCase="m\x82canique chap3";
+    cases[24].nomCase="allez en soiree";
+    cases[25].nomCase="mecanique chap3";
     cases[25].coutDachat=300;
     cases[25].vPro=150;
     cases[25].prix2=390;
@@ -121,7 +123,7 @@ void initialisation(structcase cases[32]){
     cases[25].prix4=1100;
     cases[25].prix5=1275;
     cases[26].nomCase="caisse de communaut\x82";
-    cases[27].nomCase="m\x82canique chap4";
+    cases[27].nomCase="mecanique chap4";
     cases[27].coutDachat=320;
     cases[27].vPro=160;
     cases[27].prix1=150;
@@ -141,7 +143,7 @@ void initialisation(structcase cases[32]){
     cases[29].prix3=1100;
     cases[29].prix4=1300;
     cases[29].prix5=1500;
-    cases[30].nomCase="sieste inopin\x82e";
+    cases[30].nomCase="sieste inopinee";
     cases[31].nomCase="algo et prog chap4 POINTEURS";
     cases[31].coutDachat=400;
     cases[31].vPro=200;
@@ -152,22 +154,26 @@ void initialisation(structcase cases[32]){
     cases[31].prix4=1700;
     cases[31].prix5=2000;
     //les prix sans maison et sans doublon vont de 2 en 2 ( sauf les 2 dernières cases )
-    for(int i=1;i<29;i=i+2){
+    /*for(int i=1; i<29; i=i+2)
+    {
         cases[i].prix0=a;
         a=a+2;
-    }
+    }*/
     //les prix sans maison avec doublons sont le double des prix0
-    for(int i=1;i<32;i=i+2){
+    for(int i=1; i<32; i=i+2)
+    {
         cases[i].prix20=cases[i].prix0*2;
     }
     //les prix avec une maison vont de 10 en 10 ( sauf pour les 2 dernières cases )
-    for(int i=1;i<27;i=i+2){
+    for(int i=1; i<27; i=i+2)
+    {
         cases[i].prix1=b;
         b=b+10;
     }
 
     //les prix des maisons vont de 50 en 50 entre les 4 lignes (50 pour la 1ere ligne, 100 pour la deuxième, etc)
-    for(int i=1;i<32;i=i+8){
+    for(int i=1; i<32; i=i+8)
+    {
         cases[i].prixFiche=c;
         cases[i+2].prixFiche=c;
         cases[i+4].prixFiche=c;
@@ -175,56 +181,64 @@ void initialisation(structcase cases[32]){
         c=c+50;
     }
     // les prix pour déhypothèquer sont de 10% supèrieurs à la valeure d'hypothèque
-    for(int i=1;i<32;i=i+2){
+    for(int i=1; i<32; i=i+2)
+    {
         cases[i].vProap=cases[i].vPro*1.1;
     }
+    for(int i=0;i<32;i++)
+    {
+        cases[i].casesutil=0;
+    }
 }
-void debutpartie(){
-    int nbjoueurs;
+
+
+void debutpartie(int nbjoueurs,joueur tableauj[nbjoueurs])
+{
     int i,a;
     FILE* fichier=NULL;
 
     //ici le but est de créer une sauvegarde uniquement si elle n'éxiste pas déjà, afin de s'y retrouver plus facilement
     fichier=fopen("sauvegarde1.txt","r");//ouvre un fichier en lecture seule pour ne pas en créer un
-    if(fichier == NULL){                     // si le fichier n'existe pas
+    if(fichier == NULL)                      // si le fichier n'existe pas
+    {
         fichier=fopen("sauvegarde1.txt","w");//on le crée en écriture seule
     }
-    else if(fichier != NULL){ //si le fichier sauvegarde1 existe déjà, on tente avec le fichier sauvegarde2
+    else if(fichier != NULL)  //si le fichier sauvegarde1 existe déjà, on tente avec le fichier sauvegarde2
+    {
         FILE* fichier=NULL;
         fichier=fopen("sauvegarde2.txt","r");//on repète la manip du fichier sauvegarde1 avec sauvegarde2
-        if(fichier=NULL){
+        if(fichier==NULL)
+        {
             fichier=fopen("sauvegarde2.txt","w");
         }
     }
-     else if(fichier != NULL){//si le fichier sauvegarde2 existe déjà, on tente avec le fichier sauvegarde3
+    else if(fichier != NULL) //si le fichier sauvegarde2 existe déjà, on tente avec le fichier sauvegarde3
+    {
         FILE* fichier=NULL;
         fichier=fopen("sauvegarde3.txt","r");// on répète la manip du fichier sauvegarde1 avec sauvegarde3
-        if(fichier=NULL){
+        if(fichier==NULL)
+        {
             fichier=fopen("sauvegarde3.txt","w");
         }
     }
-    else if(fichier != NULL){// si les 3 fichier on déjà étés crées on conseil de suprimer ou terminer une partie
+    else if(fichier != NULL) // si les 3 fichier on déjà étés crées on conseil de suprimer ou terminer une partie
+    {
         printf("tous les emplacements de sauvegarde sont pris, supprimez une sauvegarde ou terminez une partie en cours \n");
         return;
     }
-
-    do{// sinon on continue sur le premier fichier non existant et on commence la partie en demandanat les informations sur les joueurs
-    printf("nombre de joueurs? (maximum 6 joueurs)\n");
-    scanf("%d",&nbjoueurs);
-    }while(nbjoueurs>6);//blindage pour ne pas dépasser 6 joueurs
-    joueur tableauj[nbjoueurs];// création d'un tableau de joueurs de la taille du nombre de joueurs
-    for(i=1;i<=nbjoueurs+1;i++){//récupération des informations de chaque joueur
+// sinon on continue sur le premier fichier non existant et on commence la partie en demandanat les informations sur les joueurs
+    for(i=1; i<=nbjoueurs; i++) //récupération des informations de chaque joueur
+    {
         tableauj[i].identifiant=i;
         printf("entrez les information du joueur n\xF8 %d \n",i);
         printf("entrez le nom du joueur (max 10 charactere)\n");
         fflush(stdin);
         gets(tableauj[i].nom);
-        tableauj[i].emplacement[1][1];
         tableauj[i].portefeuille=1500;
         printf("Bonjour %s ,vous \x88tes le joueur %d, vous commencez avec 1500 minutes, faites en bon usage!\n",tableauj[i].nom,i);
-        printf("entrez 1 pour continuer avec le joueur 2");
+        printf("entrez 1 pour continuer avec le joueur %d",i+1);
         scanf("%d",&a);
         system("cls");
     }
-fclose(fichier);
+    fclose(fichier);
 };
