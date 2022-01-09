@@ -1,10 +1,8 @@
 # monopoly-2021-2022-TD11
-monopoly-2021-2022-Hugotucoco created by GitHub Classroom
+monopoly-2021-2022-TD11 created by GitHub Classroom
 
+Hugo Mazerat
+Stanislas Leclerc
+Eleonore Tran
+Gauthier Mallard
 
-Là c'est une deuxième version
-
-voici notre
-
-#projet
-on teste un changement
