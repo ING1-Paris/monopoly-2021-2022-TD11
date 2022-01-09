@@ -15,7 +15,7 @@ int main()
         scanf("%d",&nbjoueurs);
     }
     while(nbjoueurs>4 || nbjoueurs<2); //blindage pour ne pas dépasser 6 joueurs
-    joueur tableauj[nbjoueurs+1]; // création d'un tableau de joueurs de la taille du nombre de joueurs plus un
+    joueur tableauj[5]; // création d'un tableau de joueurs de la taille du nombre de joueurs plus un
     debutpartie(nbjoueurs,tableauj);
     int tab[9][5];
     structcase cases[32];

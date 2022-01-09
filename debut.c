@@ -8,6 +8,7 @@ void initialisation(structcase cases[32])
     int a=2;
     int b=10;
     int c=50;
+    int i;
     /*initialisation de toutes les données ne pouvant pas se faire par boucle
     car ne respectant pas une forme de suite ( tels que les noms ou les couts )*/
     cases[0].nomCase="debut";
@@ -54,6 +55,7 @@ void initialisation(structcase cases[32])
     cases[9].prix4=625;
     cases[9].prix5=750;
     cases[10].nomCase="LV1";
+    cases[10].coutDachat=150;
     cases[11].nomCase="mecanique chap2";
     cases[11].coutDachat=160;
     cases[11].vPro=80;
@@ -106,6 +108,7 @@ void initialisation(structcase cases[32])
     cases[21].prix4=975;
     cases[21].prix5=1150;
     cases[22].nomCase="LV2";
+    cases[22].coutDachat=150;
     cases[23].nomCase="math\x82matiques chap4";
     cases[23].coutDachat=280;
     cases[23].vPro=140;
@@ -153,40 +156,44 @@ void initialisation(structcase cases[32])
     cases[31].prix4=1700;
     cases[31].prix5=2000;
     //les prix sans maison et sans doublon vont de 2 en 2 ( sauf les 2 dernières cases )
-    for(int i=1; i<29; i=i+2)
+    for(i=1; i<29; i=i+2)
     {
         cases[i].prix0=a;
         a=a+2;
     }
     //les prix sans maison avec doublons sont le double des prix0
-    for(int i=1; i<32; i=i+2)
+    for(i=1; i<32; i=i+2)
     {
         cases[i].prix20=cases[i].prix0*2;
     }
     //les prix avec une maison vont de 10 en 10 ( sauf pour les 2 dernières cases )
-    for(int i=1; i<27; i=i+2)
+    for(i=1; i<27; i=i+2)
     {
         cases[i].prix1=b;
         b=b+10;
     }
 
     //les prix des maisons vont de 50 en 50 entre les 4 lignes (50 pour la 1ere ligne, 100 pour la deuxième, etc)
-    for(int i=1; i<32; i=i+8)
+    for(i=1; i<32; i=i+8)
     {
         cases[i].prixFiche=c;
         cases[i+2].prixFiche=c;
         cases[i+4].prixFiche=c;
-        cases[i+5].prixFiche=c;
+        cases[i+6].prixFiche=c;
         c=c+50;
     }
     // les prix pour déhypothèquer sont de 10% supèrieurs à la valeure d'hypothèque
-    for(int i=1; i<32; i=i+2)
+    for(i=1; i<32; i=i+2)
     {
         cases[i].vProap=cases[i].vPro*1.1;
     }
-    for(int i=0;i<32;i++)
+    for(i=0;i<32;i++)
     {
         cases[i].casesutil=0;
+    }
+    for(i=1;i<32;i++)
+    {
+        cases[i].proprietaire=0;
     }
 }
 

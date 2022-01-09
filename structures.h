@@ -1,11 +1,12 @@
 #ifndef STRUCTURES_H_INCLUDED
 #define STRUCTURES_H_INCLUDED
-#include <stdbool.h>
+
 int lancerde();
 void debutpartie();
 void initialisation();
 void payerloyer();
 void arrivcase();
+
 
 typedef struct{
     int proprietaire,prix0, prix20, prix1, prix2, prix3, prix4, prix5, prixFiche, vPro, vProap;
@@ -24,7 +25,7 @@ typedef struct{
     int joueuremplacement,nbfiches;//Nombre de joueurs dans la case.
     int casesutil;//variable signalant si la case est en cour d'utilisation par un joueur
 }structcase;//informations contenues dans chaque case.
-
+void achatcours(int j,int portj,structcase cases);
 
 typedef struct{
     int identifiant;
@@ -32,7 +33,7 @@ typedef struct{
     int portefeuille;//Temps que possède le joueur
     structcase connais[23];//tableau de structures contenant les cours de chaque joueur
     int emplacement[4][8];//Endroit du plateau ou se trouve le joueur.
-    bool prison;
+    int prison;
 
 }joueur;//Informations de chaque joueur.
 

@@ -1,11 +1,10 @@
 # depslib dependency file v1.0
-1641636836 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
+1641656741 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\debut.c
 	<stdio.h>
 	<stdlib.h>
 	"structures.h"
 
-1641636196 c:\users\33769\documents\github\monopoly-2021-2022-td11\structures.h
-	<stdbool.h>
+1641718427 c:\users\33769\documents\github\monopoly-2021-2022-td11\structures.h
 
 1641636196 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\lancerdé.c
 	<stdio.h>
@@ -18,15 +17,20 @@
 	<stdlib.h>
 	"structures.h"
 
-1641637776 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\payerloyer.c
+1641718930 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\payerloyer.c
 	<stdio.h>
 	<stdlib.h>
 	"structures.h"
 
-1641637356 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
+1641655856 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	"structures.h"
 	<windows.h>
+
+1641719181 source:c:\users\33769\documents\github\monopoly-2021-2022-td11\achatpropriété.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
 
