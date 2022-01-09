@@ -1,0 +1,29 @@
+# depslib dependency file v1.0
+1641224832 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\main.c
+	"maBiblio.h"
+
+1641313124 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\affchoix.c
+	"maBiblio.h"
+
+1641374546 c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\mabiblio.h
+	<stdio.h>
+	<stdlib.h>
+
+1640797026 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\choixmenu.c
+	"maBiblio.h"
+
+1640253980 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\reglesmonopoly1.c
+	"maBiblio.h"
+
+1640254082 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\creditsmonopoly1.c
+	"maBiblio.h"
+
+1641375337 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\demandesauv.c
+	"maBiblio.h"
+
+1641375335 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\sauvegarderpartie.c
+	"maBiblio.h"
+
+1641392460 source:c:\users\utilisateur\desktop\projets ing1\monopoly\code\menumonopoly1\chargeranciennepartie.c
+	"maBiblio.h"
+
