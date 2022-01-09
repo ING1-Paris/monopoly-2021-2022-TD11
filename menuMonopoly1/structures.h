@@ -4,6 +4,9 @@
 int lancerde();
 void debutpartie();
 void initialisation();
+void payerloyer();
+void arrivcase();
+
 
 typedef struct{
     int proprietaire,prix0, prix20, prix1, prix2, prix3, prix4, prix5, prixFiche, vPro, vProap;
@@ -19,16 +22,19 @@ typedef struct{
        vProap = prix à payer pour lever l'hypothèque*/
     int coutDachat;//Prix à payer pour acheter un cours
     char* nomCase;// Tableau contenant le nom de la case
-    int joueuremplacement;//Nombre de joueurs dans la case.
+    int joueuremplacement,nbfiches;//Nombre de joueurs dans la case.
+    int casesutil;//variable signalant si la case est en cour d'utilisation par un joueur
 }structcase;//informations contenues dans chaque case.
-
+void achatcours(int j,int portj,structcase cases);
 
 typedef struct{
     int identifiant;
     char nom[10];//nom du joueur
     int portefeuille;//Temps que possède le joueur
-    structcase connais[20];//tableau de structures contenant les cours de chaque joueur
+    structcase connais[23];//tableau de structures contenant les cours de chaque joueur
     int emplacement[4][8];//Endroit du plateau ou se trouve le joueur.
+    int prison;
+
 }joueur;//Informations de chaque joueur.
 
 
