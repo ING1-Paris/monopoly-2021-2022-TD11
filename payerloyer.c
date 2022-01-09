@@ -5,10 +5,10 @@
 void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tableauj[4],int de)
 {
     int i;//variable stockant le numero de la case sur laquelle se trouve le joueur
-    int gare=0;//variable stockant le nombre de gares que le propriétaire de la gare sur laquelle est le joueur, possède
-    int pgare=25;//prix pour une seul gare possédée
+    int gare=0;//variable stockant le nombre de gares que le propriÃ©taire de la gare sur laquelle est le joueur, possÃ¨de
+    int pgare=25;//prix pour une seul gare possÃ©dÃ©e
     int comppay;//prix que le joueur payera sur une langue vivante(compagnies d'elec et d'eau)
-    //code servant à recupérer le numero de la case en fonction de l'emplacement du pion sur le plateau
+    //code servant Ã  recupÃ©rer le numero de la case en fonction de l'emplacement du pion sur le plateau
     for(int b=1; b<=4; b++)
     {
         for(int a=1; a<=8; a++)
@@ -22,28 +22,34 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
             }
         }
     }
-    //mise en place des actions possible et à faire pour chaque case sur laquelle le joueur tombe
+    //mise en place des actions possible et Ã  faire pour chaque case sur laquelle le joueur tombe
     if(cases[0].casesutil==1)
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case d\x82part, vous recevez 200 minutes\n");
-        tableauj[j].portefeuille=tableauj[j].portefeuille+200;//gain de minutes à chaque arret sur la case départ (doubler si le joueur est arreter precisement decu)
+        tableauj[j].portefeuille=tableauj[j].portefeuille+200;//gain de minutes Ã  chaque arret sur la case dÃ©part (doubler si le joueur est arreter precisement decu)
         printf("vous avez donc %d minutes d\x82sormais\n",tableauj[j].portefeuille);
     }
     if(cases[1].casesutil==1)
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
-        if(cases[i].proprietaire!=0)// en cas de propriétaire pour la case payement su loyer
+        if(cases[i].proprietaire!=0)// en cas de propriÃ©taire pour la case payement su loyer
         {
             printf("cette case appartient \x85 %s \n",tableauj[cases[i].proprietaire].nom);
+            if(cases[i].hypotheque==1)//verificatoin si la case est hypothequee
+            {
+                printf("mais cette matiere a ete hypothequee vous pouvez y rester sans payer");
+            }
+            else
+            {
             if(cases[i].nbfiches==0)//sans fiches
             {
-                if(cases[i].proprietaire==cases[i+2].proprietaire)//doublé si le propriétaire possède les deux de la même couleur
+                if(cases[i].proprietaire==cases[i+2].proprietaire)//doublÃ© si le propriÃ©taire possÃ¨de les deux de la mÃªme couleur
                 {
                     payerloyer(tableauj[j].portefeuille,cases[i].prix20);
                 }
@@ -74,6 +80,8 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
                 payerloyer(tableauj[j].portefeuille,cases[i].prix5);
             }
         }
+        
+        }
     }
 
     if(cases[2].casesutil==1)
@@ -96,7 +104,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -141,7 +149,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -149,7 +157,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
         {
             gare=1;
             printf("cette case appartient \x85 %s \n",tableauj[cases[i].proprietaire].nom);
-//calcul du nombre de gares possédées par le propriétaire
+//calcul du nombre de gares possÃ©dÃ©es par le propriÃ©taire
             if(cases[i].proprietaire==cases[12].proprietaire)
             {
                 gare=gare+1;
@@ -164,7 +172,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
             }
             for(int y=1; y<=gare; y++)
             {
-                pgare=pgare*2;//calcul du prix à payer en fonction du nombre de gare
+                pgare=pgare*2;//calcul du prix Ã  payer en fonction du nombre de gare
             }
             printf("%s ayant %d masterclasses vous devez lui payer %d \n",tableauj[cases[i].proprietaire].nom,gare,pgare);
 
@@ -181,11 +189,11 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
 
         }
     }
-    if(cases[5].casesutil==1)//comme pour les autres cases propriétées
+    if(cases[5].casesutil==1)//comme pour les autres cases propriÃ©tÃ©es
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -236,7 +244,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -286,7 +294,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -331,7 +339,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -364,7 +372,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -409,7 +417,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -452,7 +460,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -497,13 +505,13 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         //system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        //piocher carte communauté
+        //piocher carte communautÃ©
     }
     if(cases[15].casesutil==1)
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -553,7 +561,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -604,7 +612,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -649,7 +657,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -692,7 +700,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -737,7 +745,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -770,7 +778,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -816,13 +824,13 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
         printf("un ami vous a alpagu\x82 et vous \x88tes oblig\x82 d'aller en soir\x82 directement \n");
-        printf("vous ne passez pas par la case départ");
+        printf("vous ne passez pas par la case dÃ©part");
     }
     if(cases[25].casesutil==1)
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -867,13 +875,13 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        //piochercarte caisse de communauté
+        //piochercarte caisse de communautÃ©
     }
     if(cases[27].casesutil==1)
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -918,7 +926,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -961,7 +969,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
@@ -1023,7 +1031,7 @@ void arrivcase(int j,int tab[9][5],int pionj1,structcase cases[32],joueur tablea
     {
         system("cls");
         printf("vous \x88tes tomb\x82 sur la case %s \n",cases[i].nomCase);
-        if(cases[i].proprietaire==0)//si il n'y a pas de propriétaire à la case
+        if(cases[i].proprietaire==0)//si il n'y a pas de propriÃ©taire Ã  la case
         {
             achatcours(j,tableauj[j].portefeuille,cases[i]);
         }
