@@ -28,7 +28,7 @@ void affchoix(int d)//fonction permettant de présenter à l'utilisateur son choix
         }
         if(lettre == 'p')
         {
-            void lancementNouvellePartie();
+            initialisation();
             return 0;//Mettre en execution le programme pour lancer une nouvelle partie.
         }
 

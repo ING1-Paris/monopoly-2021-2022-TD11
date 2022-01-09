@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1641590343 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\vente\main.c
+	"maBiblio.h"
+
+1641590401 c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\vente\mabiblio.h
+	<stdio.h>
+	<stdlib.h>
+
+1641589652 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\vente\echange.c
+	"maBiblio.h"
+
+1641590256 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\vente\achat.c
+	"maBiblio.h"
+
+1641590336 source:c:\users\utilisateur\onedrive\documents\github\monopoly-2021-2022-td11\vente\fvente.c
+	"maBiblio.h"
+

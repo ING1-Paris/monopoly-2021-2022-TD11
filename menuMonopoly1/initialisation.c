@@ -2,6 +2,7 @@
 
 
 
+
 //sousprogramme servant à remplir un tableau de cases lors de l'initialisation d'une partie
 void initialisation(structcase cases[32]){
     //variables servants lors des boucles de remplissage

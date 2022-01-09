@@ -26,15 +26,27 @@ void debutpartie(){
     }
     else if(fichier != NULL){// si les 3 fichier on d√©j√† √©t√©s cr√©es on conseil de suprimer ou terminer une partie
         printf("tous les emplacements de sauvegarde sont pris, supprimez une sauvegarde ou terminez une partie en cours \n");
-        return;
     }
 
+<<<<<<< Updated upstream
     do{// sinon on continue sur le premier fichier non existant et on commence la partie en demandanat les informations sur les joueurs
     printf("nombre de joueurs? (maximum 6 joueurs)\n");
     scanf("%d",&nbjoueurs);
     }while(nbjoueurs>6);//blindage pour ne pas d√©passer 6 joueurs
     joueur tableauj[nbjoueurs];// cr√©ation d'un tableau de joueurs de la taille du nombre de joueurs
     for(i=1;i<=nbjoueurs+1;i++){//r√©cup√©ration des informations de chaque joueur
+=======
+    do
+    {// sinon on continue sur le premier fichier non existant et on commence la partie en demandanat les informations sur les joueurs
+        printf("nombre de joueurs? (maximum 6 joueurs)\n");
+        scanf("%d",&nbjoueurs);
+    }while(nbjoueurs>6 || nbjoueurs<1);//blindage pour ne pas dÈpasser 6 joueurs //J'ai modifiÈ le blindage pour qu'on ne puisse pas mettre moins d'un joueur.
+    joueur tableauj[nbjoueurs];// crÈation d'un tableau de joueurs de la taille du nombre de joueurs
+
+
+    for(i=1;i<=nbjoueurs+1;i++)//rÈcupÈration des informations de chaque joueur
+    {
+>>>>>>> Stashed changes
         tableauj[i].identifiant=i;
         printf("entrez les information du joueur n\xF8 %d \n",i);
         printf("entrez le nom du joueur (max 10 charactere)\n");
